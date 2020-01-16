@@ -3,3 +3,6 @@ API KEY upisati u;
 
 MySQL bazu podataka postaviti u:
 application/config/database.php
+
+MySQL shema
+/database.sql

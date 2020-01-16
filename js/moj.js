@@ -44,9 +44,11 @@ function dajAjax(grad){
 function postaviOnKlik(){
 	//kao posebna fukcija jer nakon dodavanja novog favorita ne radi onclick na taj gumb!
 	
+	
+	
 	$('.gumbgrad').unbind('click'); 			// prvo mičemo click event ako ga ima
 	$('.gumbgrad').on('click', function(){ 		// pa ga onda postavljamo
-
+		$('.loader').css("display","block");
 		
 	$('#sidebar').collapse('hide'); // i zatvaramo izbornik gradova ako je otvoren
 
@@ -60,7 +62,7 @@ function postaviOnKlik(){
 postaviOnKlik(); // aktiviraj onclick event, 
 
 $('.searchform').on('submit', function(e){  
-		
+		$('.loader').css("display","block");
 		e.preventDefault();	
 		var grad = $('#kojigrad').val(); //koji grad je upisan u pretraživač
 		
@@ -82,6 +84,9 @@ function rezultati(results){
 	var vlaga = obj.vlaga;
 	var ikona = obj.ikona; //od ovoga će ikonica; ide kroz fukciju zamjenaIkona!
 	var vrijeme = obj.vrijeme; //kakvo je vrijeme;
+	
+	//prvo mičemo loader
+	$('.loader').css("display","none");
 	
 	//prikaz podataka
 	$('#prikazpodataka').append("<h2 class='velikaslova'>"+grad+"</h2><hr>");

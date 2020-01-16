@@ -13,3 +13,4 @@ em{color:blue}
 em::before{content: "'"}
 em::after{content: "'"}
 #blokzaspremanje{display:none}
+.loader{display:none}

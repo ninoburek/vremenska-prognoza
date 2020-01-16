@@ -87,6 +87,7 @@
 		</div>	
 		
 		<div class="col">
+			<div class="loader"><i class="fas fa-circle-notch fa-spin"></i> pričekajte trenutak...</div>
 			<div id="prikazpodataka"></div> <? //div za prikaz rezultata vremenske prognoze ?>
 		</div>
 		
